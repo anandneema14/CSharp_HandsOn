@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnonymousMethod_LambdaExpre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousType", "AnonymousType\AnonymousType.csproj", "{6EFB88E3-6E09-47DB-AB03-593749CA6ED1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSamples", "AsyncSamples\AsyncSamples.csproj", "{FE0ADF67-9559-48E3-A6E0-237127526717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6EFB88E3-6E09-47DB-AB03-593749CA6ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EFB88E3-6E09-47DB-AB03-593749CA6ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EFB88E3-6E09-47DB-AB03-593749CA6ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0ADF67-9559-48E3-A6E0-237127526717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0ADF67-9559-48E3-A6E0-237127526717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0ADF67-9559-48E3-A6E0-237127526717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0ADF67-9559-48E3-A6E0-237127526717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
