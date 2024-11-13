@@ -24,7 +24,7 @@
             resultAsync2.Wait();
             resultAsync2.GetAwaiter().GetResult();
 
-
+            Console.WriteLine("This is a test comment for checkin to git via MAC");
             Console.ReadLine();
         }
     }
