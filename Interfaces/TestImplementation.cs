@@ -3,8 +3,9 @@ namespace Interfaces;
 //Here we are implementing the Child Interface,
 //But we need to implement Base Interface methods aa wel
 //otherwise we will get the compilation error 
-public class TestImplementation : IChild
+public class TestImplementation : IChild, Default_Interface_C_8_0
 {
+    
     public void MethodChild()
     {
         Console.WriteLine("TestImplementation: Child Interface Method");
@@ -29,5 +30,10 @@ public class TestImplementation : IChild
     void IBase.MethodOverride()
     {
         Console.WriteLine("TestImplementation: Base Interface Method");
+    }
+
+    public void display_1()
+    {
+        Console.WriteLine("Default Interface Unimplemented Method");
     }
 }
