@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousType", "AnonymousT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncSamples", "AsyncSamples\AsyncSamples.csproj", "{FE0ADF67-9559-48E3-A6E0-237127526717}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{0D788F5C-014E-4B7A-B601-42071C35BC01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FE0ADF67-9559-48E3-A6E0-237127526717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE0ADF67-9559-48E3-A6E0-237127526717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE0ADF67-9559-48E3-A6E0-237127526717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D788F5C-014E-4B7A-B601-42071C35BC01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D788F5C-014E-4B7A-B601-42071C35BC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D788F5C-014E-4B7A-B601-42071C35BC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D788F5C-014E-4B7A-B601-42071C35BC01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
