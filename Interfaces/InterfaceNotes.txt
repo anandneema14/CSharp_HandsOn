@@ -11,4 +11,5 @@ Inheritance in Interfaces:
 New in Interfaces:
 1. In C# 8.0, we can have methods implementation as well in interfaces.
 2. This feature is called Default Interface Methods
-3. Scenario in which this is useful is, whenever we want to add new functionality to an existing interface, so instead of introducing a breaking change to existing interface we can have a default implementation in the interface and it will be available to all the classes that implemented that interface
+3. Scenario in which this is useful is, whenever we want to add new functionality to an existing interface, so instead of introducing a breaking change to existing interface we can have a default implementation in the interface and it will be available to all the classes that implemented that interface. 
+4. This way all the classes will accept it as default implementation and if any of the class needs to have a different implementation  they can override it.
