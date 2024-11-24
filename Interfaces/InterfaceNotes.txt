@@ -1,0 +1,14 @@
+Interfaces
+Need of Interface:
+1. Used to achieve loose coupling
+2. Used to achieve total abstraction
+3. Used to achieve component-based programming
+4. Interfaces add a plug and play like architecture into applications
+
+Inheritance in Interfaces:
+1. If both derived interface and base interface declares the same member then the base interface member name is hidden by the derived interface member name.
+
+New in Interfaces:
+1. In C# 8.0, we can have methods implementation as well in interfaces.
+2. This feature is called Default Interface Methods
+3. Scenario in which this is useful is, whenever we want to add new functionality to an existing interface, so instead of introducing a breaking change to existing interface we can have a default implementation in the interface and it will be available to all the classes that implemented that interface
