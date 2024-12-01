@@ -1,0 +1,4 @@
+The core of async programming is the Task and Task<T> objects, which model asynchronous operations. 
+  They are supported by the async and await keywords. The model is fairly simple in most cases:
+1. For I/O-bound code, you await an operation that returns a Task or Task<T> inside of an async method.
+2. For CPU-bound code, you await an operation that is started on a background thread with the Task.Run method.
