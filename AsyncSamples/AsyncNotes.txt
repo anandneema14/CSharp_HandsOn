@@ -1,4 +1,16 @@
+async programming will be useful when we want to utilize I/O bound activities like requesting data from a network, accessing a database, or reading and writing to a file system. You could also have CPU-bound code, such as performing an expensive calculation, which is also a good scenario for writing async code.
+
 The core of async programming is the Task and Task<T> objects, which model asynchronous operations. 
   They are supported by the async and await keywords. The model is fairly simple in most cases:
 1. For I/O-bound code, you await an operation that returns a Task or Task<T> inside of an async method.
 2. For CPU-bound code, you await an operation that is started on a background thread with the Task.Run method.
+
+What happens behind the scenes:
+The compiler transforms your code into a state machine that keeps track of things like yielding execution when an await is reached and resuming execution when a background job has finished. 
+
+If the work you have is I/O-bound, use async and await without Task.Run. You should not use the Task Parallel Library.
+
+If the work you have is CPU-bound and you care about responsiveness, use async and await, but spawn off the work on another thread with Task.Run. If the work is appropriate for concurrency and parallelism, also consider using the Task Parallel Library.
+
+async void should only be used for event handlers, because events doesn't have return types. Exceptions thrown in an async void method can't be caught outside of that method.
+
