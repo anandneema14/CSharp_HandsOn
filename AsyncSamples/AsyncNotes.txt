@@ -24,5 +24,6 @@ You use the void return type in asynchronous event handlers, which require a voi
 
 The caller of a void-returning async method can't catch exceptions thrown from the method. Such unhandled exceptions are likely to cause your application to fail. If a method that returns a Task or Task<TResult> throws an exception, the exception is stored in the returned task. The exception is rethrown when the task is awaited. Make sure that any async method that can produce an exception has a return type of Task or Task<TResult> and that calls to the method are awaited.
 
+By using Task.WhenAny, you can start multiple tasks at the same time and process them one by one as they're completed rather than process them in the order in which they're started.
 
 
