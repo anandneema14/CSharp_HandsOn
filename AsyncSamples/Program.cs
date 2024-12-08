@@ -218,7 +218,7 @@ namespace AsyncSamples
             //because it propagates exceptions rather than wrapping them in an AggregateException.
             //However, all these methods cause potential deadlock and thread pool starvation issues.
             //They should all be avoided in favor of async/await
-            var resultAsync2 = AsyncReturnType.MethodAsync2(5);
+            var resultAsync2 = AsyncReturnTypes.MethodAsync2(5);
             resultAsync2.Wait();
             resultAsync2.GetAwaiter().GetResult();
 
@@ -285,6 +285,12 @@ namespace AsyncSamples
             Juice oj = PourOJ();
             Console.WriteLine("Orange Juice is ready");
             Console.WriteLine("Breakfast is ready!");
+
+            //AsyncReturnTypes asyncReturnTypes = new AsyncReturnTypes();
+            await foreach (var a in AsyncReturnTypes.ReadWordsFromStreamAsync())
+            {
+                Console.WriteLine(a);
+            }
             Console.WriteLine("This is a test comment for checkin to git via MAC");
             Console.ReadLine();
         }
