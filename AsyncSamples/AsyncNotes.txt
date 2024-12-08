@@ -14,3 +14,15 @@ If the work you have is CPU-bound and you care about responsiveness, use async a
 
 async void should only be used for event handlers, because events doesn't have return types. Exceptions thrown in an async void method can't be caught outside of that method.
 
+The async and await keywords don't cause additional threads to be created. Async methods don't require multithreading because an async method doesn't run on its own thread. The method runs on the current synchronization context and uses time on the thread only when the method is active.
+
+An async method that has a void return type can't be awaited, and the caller of a void-returning method can't catch any exceptions that the method throws.
+
+An async method can't declare in, ref or out parameters, but the method can call methods that have such parameters. Similarly, an async method can't return a value by reference, although it can call methods with ref return values.
+
+You use the void return type in asynchronous event handlers, which require a void return type. For methods other than event handlers that don't return a value, you should return a Task instead, because an async method that returns void can't be awaited. Any caller of such a method must continue to completion without waiting for the called async method to finish. The caller must be independent of any values or exceptions that the async method generates.
+
+The caller of a void-returning async method can't catch exceptions thrown from the method. Such unhandled exceptions are likely to cause your application to fail. If a method that returns a Task or Task<TResult> throws an exception, the exception is stored in the returned task. The exception is rethrown when the task is awaited. Make sure that any async method that can produce an exception has a return type of Task or Task<TResult> and that calls to the method are awaited.
+
+
+
