@@ -128,6 +128,15 @@ namespace AsyncSamples
             await AsyncFileAccess.ProcessReadAsync($"sample.txt");
             Console.WriteLine("--Data Read completed");
             
+            Console.WriteLine("--Writing Multiple Files Asynchronously");
+            await AsyncFileAccess.ProcessMultipleWritesAsync();
+            Console.WriteLine("--Writing to multiple Files Done");
+            
+            Console.WriteLine("--Reading Multiple Files Asynchronously");
+            var text = await AsyncFileAccess.ProcessMultipleReadsAsync();
+            Console.WriteLine(text);
+            Console.WriteLine("--Reading Multiple Files Done");
+            
             #endregion
             
             Console.WriteLine("This is a test comment for checkin to git via MAC");
