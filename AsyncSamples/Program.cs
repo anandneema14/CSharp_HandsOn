@@ -118,6 +118,18 @@ namespace AsyncSamples
             
             #endregion
             
+            #region Accessing Files Asynchronously
+            
+            Console.WriteLine("--Writing Files Asynchronously");
+            await AsyncFileAccess.ProcessWriteAsync($"sample.txt");
+            Console.WriteLine("--Data Written completed");
+            
+            Console.WriteLine("--Reading Files Asynchronously");
+            await AsyncFileAccess.ProcessReadAsync($"sample.txt");
+            Console.WriteLine("--Data Read completed");
+            
+            #endregion
+            
             Console.WriteLine("This is a test comment for checkin to git via MAC");
             Console.ReadLine();
         }
