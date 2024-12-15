@@ -30,4 +30,7 @@ public class Constants
     {
         MaxResponseContentBufferSize = 1_000_000
     };
+    
+    public static readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
 }

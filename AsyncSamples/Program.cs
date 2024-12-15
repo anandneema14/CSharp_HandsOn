@@ -148,8 +148,11 @@ namespace AsyncSamples
                 {
                     Console.WriteLine("--Press ENTER Key to Cancel...");
                 }
+                Console.WriteLine("\nENTER key pressed: cancelling downloads.\n");
+                Constants.cancellationTokenSource.Cancel();
             });
-            Task sumPageSizeTask = ProcessAsyncTasks.SumPageSizesAsync();
+            
+            Task sumPageSizeTask = CancelTaskAsynchronously.SumPageSizesAsync();
             Task finishedCancelledTask = await Task.WhenAny(cancelTask, sumPageSizeTask);
             if (finishedCancelledTask == cancelTask)
             {
