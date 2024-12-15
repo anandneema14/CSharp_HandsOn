@@ -139,6 +139,34 @@ namespace AsyncSamples
             
             #endregion
             
+            #region Cancel a List of Tasks Asynchronously
+            
+            Console.WriteLine("--Press ENTER Key to Cancel...");
+            Task cancelTask = Task.Run(() =>
+            {
+                while (Console.ReadKey(true).Key != ConsoleKey.Enter)
+                {
+                    Console.WriteLine("--Press ENTER Key to Cancel...");
+                }
+            });
+            Task sumPageSizeTask = ProcessAsyncTasks.SumPageSizesAsync();
+            Task finishedCancelledTask = await Task.WhenAny(cancelTask, sumPageSizeTask);
+            if (finishedCancelledTask == cancelTask)
+            {
+                //wait for cancellation to take place
+                try
+                {
+                    await sumPageSizeTask;
+                    Console.WriteLine("Download task completed before cancel request was processed.");
+                }
+                catch (TaskCanceledException ex)
+                {
+                    Console.WriteLine("Download task has been cancelled./n" + ex.Message);
+                }
+            }
+            
+            #endregion
+            
             Console.WriteLine("This is a test comment for checkin to git via MAC");
             Console.ReadLine();
         }
