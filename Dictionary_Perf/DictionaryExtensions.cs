@@ -33,6 +33,15 @@ namespace Dictionary_Perf
             return val;
         }
 
+        /// <summary>
+        /// Updating a value in the dictionary using Key
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="TValue"></typeparam>
+        /// <param name="dict"></param>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static bool TryUpdate<TKey, TValue>(
             this Dictionary<TKey, TValue> dict, TKey key, TValue value)
             where TKey: notnull
